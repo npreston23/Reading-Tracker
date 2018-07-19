@@ -40,5 +40,15 @@ li a.active {
     display:grid;
     grid-template-columns: 69% 30%;
     grid-column-gap:1em;
-    grid-row-gap:1em;    
+    grid-row-gap:1em;
+  }
+
+  .wrapper > div{
+    background: #282828 ;
+    padding: 2em;
+    border: 1em;
+    color : white;
+  }
+  .wrapper > div:nth-child(odd){
+    background: #888888;
   }
