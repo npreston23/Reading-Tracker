@@ -1,28 +1,42 @@
-function Book(title, page) {
-  this.Book = title;
-  this.Page = page;
-}
+var inputtedBook;
+var inputtedPage;
+var inputtedAuthor;
+var savedBook;
+
+function Book(title, page, author) {
+  this.title = title;
+  this.page = page;
+  this.author = author;
+};
+
+var grabBookInfo = function(){
+  inputtedBook = document.getElementById("bookTitle").value;
+  inputtedPage = document.getElementById("pageNumber").value;
+  inputtedAuthor = document.getElementById("authorName").value;
+};
+
+var saveBookInfo = function(){
+
+};
 
 // user interface logic
 $(document).ready(function() {
-  $("form#current-book").submit(function(event) {
+  $("#currentBook").submit(function(event) {
     event.preventDefault();
 
-    var inputtedBook = $("input#book-title").val();
-    var inputtedPage = $("input#page-number").val();
+    grabBookInfo();
 
-    var savedBook = new Save(inputtedBook, inputtedPage);
+    savedBook = new Book(inputtedBook, inputtedPage,  inputtedAuthor);
 
-    $("ul#contacts").append("<li><span class='contact'>" + savedBook.Book + "</span></li>");
+    $("#finishedBooks").append("<li> <span class='contact'>" + savedBook.title + "</span></li>");
 
-    $(".contact").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h2").text(newContact.firstName);
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-    });
+    document.getElementById("currentBook").reset();
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
+//    $(".#").last().click(function() {
+//      $("#completed-books").show();
+//      $("#completed-books").text(savedBook.title);
+//      $(".#").text(savedBook.page);
+//      $(".#").text(savedBook.page);
+//    });
   });
 });
