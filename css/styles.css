@@ -21,11 +21,17 @@ li a {
   width: 100%;
 }
 
-li a:hover:not(.active) {
-  background-color: #ddd;
-}
-
 li a.active {
   color: white;
   background-color: gray;
+}
+
+.main-heading {
+  text-align: center;
+  position: absolute;
+  top: 3%;
+  width: 100%;
+  font-family: fantasy;
+  font-size: 50px;
+  color: #000;
 }
