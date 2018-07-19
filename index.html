@@ -26,7 +26,16 @@
           </div>
         </div>
       </nav>
-      <div class="to-read">
+      <div class="add-to-read" action="index.html" method="post">
+        <div class="form-group">
+        <label for="add-title">Enter a title:</label>
+        <input id="add-title" class="form-control">
+        <label for="add-author">Enter the author:</label>
+        <input id="add-author" class="form-control">
+        <button type="submit" class="btn">Add</button>
+       </div>
+     </div>
+      <div id="books-to-read">
         <ul>
 
         </ul>
