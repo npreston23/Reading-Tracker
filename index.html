@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <ul>
-            <li><a class="nav-item nav-link active" href="#">Current Book <span class="sr-only">(current)</span></a></li>
+            <li><a id="sr-only" class="nav-item nav-link active" href="#">Current Book</a></li>
             <li><a class="nav-item nav-link" href="#">Books Read</a></li>
             <li><a class="nav-item nav-link" href="#">To Read</a></li>
             </ul>
@@ -71,6 +71,29 @@
           <p>House of dreams</p>
         </div>
       </div>
+
+      <div class="form">
+        <form id=currentBook>
+          <div class="form-group">
+            <label for="title">Please add your title:</label>
+            <input id=bookTitle type="text">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="title">Please enter your page number: </label>
+            <input id=pageNumber type="text">
+          </div>
+
+          <button type="submit">Save</button>
+
+          <button type="submit">I'm finished!</button>
+      </form>
+
+        <div class="completed books">
+          <p><span id=finishedBooks></span></p>
+        </div>
+      </div>
+
 
     </div>
   </body>
