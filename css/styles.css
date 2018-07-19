@@ -35,3 +35,10 @@ li a.active {
   font-size: 50px;
   color: #000;
 }
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 69% 30%;
+    grid-column-gap:1em;
+    grid-row-gap:1em;    
+  }
