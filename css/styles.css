@@ -20,3 +20,12 @@ li a {
   font-weight: bold;
   width: 100%;
 }
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: gray;
+}
